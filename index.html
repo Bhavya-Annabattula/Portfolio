@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="style.css">
+    <title>Portfolio Website</title>
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <div class="logo" data-aos="zoom-in" data-aos-duration="1500">
+                Annabattula<span>Sai Bhavya Sri</span>
+            </div>
+            <div class="links">
+                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="100"><a href="#home">Home</a></div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="200"><a href="#about">About</a></div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="300"><a href="#skills">Skills</a></div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="400"><a href="#projects">Projects</a></div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="500"><a href="#contact">Contact</a></div>
+            </div>
+        </div>
+        <i class="fa-solid fa-bars hamburg" onclick="hamburg()"></i>
+        <div class="dropdown">
+            <div class="links">
+                <a href="#home" onclick="cancel()">Home</a>
+                <a href="#about" onclick="cancel()">About</a>
+                <a href="#skills" onclick="cancel()">Skills</a>
+                <a href="#projects" onclick="cancel()">Projects</a>
+                <a href="#contact" onclick="cancel()">Contact</a>
+                <i class="fa-solid fa-xmark cancel" onclick="cancel()"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HOME SECTION (your original) -->
+    <section id="home">
+        <div class="main-container">
+            <div class="content">
+                <h1 data-aos="fade-left" data-aos-duration="1500" data-aos-delay="700">Hey I'm <span>Bhavya Sri</span></h1>
+                <div data-aos="fade-right" data-aos-duration="1500" data-aos-delay="900" class="typewriter">I'm a <span class="typewriter-text"></span><label for="">|</label></div>
+                <p data-aos="flip-down" data-aos-duration="1500" data-aos-delay="1100">I am a Computer Science undergraduate with a strong interest in software development and cloud technologies. I enjoy building practical projects that strengthen my understanding of how systems work, from designing responsive web interfaces to implementing cloud infrastructure using AWS. My experience includes working with Java, Python, and JavaScript, along with hands-on exposure to networking concepts through cloud-based projects. I am particularly interested in problem-solving, system design, and continuously improving my technical skills by applying them to real-world scenarios.</p>
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/in/annabattula-sai-bhavya-sri" target="_blank" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="1300"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://github.com/bhavya-annabattula" target="_blank" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="1400"><i class="fa-brands fa-github"></i></a>
+                </div>
+                <div class="btn" data-aos="zoom-out" data-aos-duration="1500" data-aos-delay="1800">
+                    <button onclick="downloadCV()">Download CV</button>
+                </div>
+            </div>
+            <div class="image" data-aos="zoom-in" data-aos-duration="3000">
+                <img src="me.png" alt="">
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section id="about">
+        <div class="about-container">
+            <h2 class="section-title" data-aos="fade-up">About <span>Me</span></h2>
+            <div class="about-wrapper">
+                <div class="about-left" data-aos="fade-right" data-aos-duration="1500">
+                    <div class="about-img-box">
+                        <img src="me.png" alt="Bhavya Sri">
+                    </div>
+                    <div class="about-stats">
+                        <div class="stat" data-aos="zoom-in" data-aos-delay="100">
+                            <h3>8.3</h3>
+                            <p>CGPA</p>
+                        </div>
+                        <div class="stat" data-aos="zoom-in" data-aos-delay="200">
+                            <h3>2+</h3>
+                            <p>Projects</p>
+                        </div>
+                        <div class="stat" data-aos="zoom-in" data-aos-delay="300">
+                            <h3>5+</h3>
+                            <p>Certs</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-right" data-aos="fade-left" data-aos-duration="1500">
+                    <h3>Who am I?</h3>
+                    <p>I'm a motivated B.Tech CSE 2nd year student at Andhra University, Visakhapatnam. I'm passionate about software development and cloud computing, always eager to learn and build real-world solutions.</p>
+                    <p>I've worked with AWS cloud infrastructure, built responsive web applications, and love solving problems with code. I'm currently looking for internship opportunities to apply my skills in a real engineering environment.</p>
+                    <div class="about-details">
+                        <div class="detail-item">
+                            <i class="fa-solid fa-graduation-cap"></i>
+                            <span>B.Tech CSE — Andhra University (CGPA: 8.3)</span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fa-solid fa-location-dot"></i>
+                            <span>Visakhapatnam, Andhra Pradesh</span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fa-solid fa-envelope"></i>
+                            <span>bhavya.annabattula@gmail.com</span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fa-solid fa-briefcase"></i>
+                            <span>Open to Internships</span>
+                        </div>
+                    </div>
+                    <a href="#contact" class="about-btn">Let's Talk <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SKILLS SECTION -->
+    <section id="skills">
+        <div class="skills-container">
+            <h2 class="section-title" data-aos="fade-up">My <span>Skills</span></h2>
+            <p class="section-sub" data-aos="fade-up" data-aos-delay="100">Technologies I work with</p>
+            <div class="skills-grid">
+
+                <div class="skill-box" data-aos="fade-up" data-aos-delay="100">
+                    <h3><i class="fa-solid fa-code"></i> Languages</h3>
+                    <div class="skill-bars">
+                        <div class="skill-item">
+                            <div class="skill-label"><span><i class="fa-brands fa-java"></i> Java</span><span>70%</span></div>
+                            <div class="bar"><div class="fill" data-width="70"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-label"><span><i class="fa-brands fa-python"></i> Python</span><span>65%</span></div>
+                            <div class="bar"><div class="fill" data-width="65"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-label"><span><i class="fa-brands fa-js"></i> JavaScript</span><span>60%</span></div>
+                            <div class="bar"><div class="fill" data-width="60"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-label"><span><i class="fa-solid fa-database"></i> SQL / MySQL</span><span>60%</span></div>
+                            <div class="bar"><div class="fill" data-width="60"></div></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-box" data-aos="fade-up" data-aos-delay="200">
+                    <h3><i class="fa-solid fa-globe"></i> Web & Cloud</h3>
+                    <div class="skill-bars">
+                        <div class="skill-item">
+                            <div class="skill-label"><span><i class="fa-brands fa-html5"></i> HTML & CSS</span><span>75%</span></div>
+                            <div class="bar"><div class="fill" data-width="75"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-label"><span><i class="fa-brands fa-aws"></i> AWS</span><span>65%</span></div>
+                            <div class="bar"><div class="fill" data-width="65"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-label"><span><i class="fa-brands fa-git-alt"></i> Git & GitHub</span><span>65%</span></div>
+                            <div class="bar"><div class="fill" data-width="65"></div></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-box" data-aos="fade-up" data-aos-delay="300">
+                    <h3><i class="fa-solid fa-brain"></i> CS Fundamentals</h3>
+                    <div class="skill-bars">
+                        <div class="skill-item">
+                            <div class="skill-label"><span><i class="fa-solid fa-sitemap"></i> DSA</span><span>60%</span></div>
+                            <div class="bar"><div class="fill" data-width="60"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-label"><span><i class="fa-solid fa-lightbulb"></i> Problem Solving</span><span>70%</span></div>
+                            <div class="bar"><div class="fill" data-width="70"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-label"><span><i class="fa-solid fa-network-wired"></i> Computer Networks</span><span>60%</span></div>
+                            <div class="bar"><div class="fill" data-width="60"></div></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-box" data-aos="fade-up" data-aos-delay="400">
+                    <h3><i class="fa-solid fa-trophy"></i> Achievements</h3>
+                    <div class="achievement-tags">
+                        <span>⭐ HackerRank 4-Star Java</span>
+                        <span>⭐ HackerRank 3-Star Python</span>
+                        <span>🏅 IBM Cloud Badge</span>
+                        <span>🏅 Google Prompt Engineering</span>
+                        <span>🏅 Kaggle Python Coder</span>
+                        <span>💻 Edumoon Coding Club</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- PROJECTS SECTION -->
+    <section id="projects">
+        <div class="projects-container">
+            <h2 class="section-title" data-aos="fade-up">My <span>Projects</span></h2>
+            <p class="section-sub" data-aos="fade-up" data-aos-delay="100">Things I've built</p>
+            <div class="projects-grid">
+
+                <div class="project-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="project-top">
+                        <div class="project-icon"><i class="fa-solid fa-cloud"></i></div>
+                        <div class="project-links">
+                            <a href="https://github.com/bhavya-annabattula" target="_blank"><i class="fa-brands fa-github"></i></a>
+                        </div>
+                    </div>
+                    <h3>AWS VPC Networking</h3>
+                    <p>Designed a custom AWS VPC with public/private subnets, Route Tables, Internet Gateway, Load Balancer, and EC2 instances using AWS best practices for secure access.</p>
+                    <div class="project-tags">
+                        <span>AWS</span><span>VPC</span><span>EC2</span><span>Python</span>
+                    </div>
+                </div>
+
+                <div class="project-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="project-top">
+                        <div class="project-icon"><i class="fa-solid fa-laptop-code"></i></div>
+                        <div class="project-links">
+                            <a href="https://github.com/bhavya-annabattula" target="_blank"><i class="fa-brands fa-github"></i></a>
+                            <a href="#" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                        </div>
+                    </div>
+                    <h3>Personal Portfolio Website</h3>
+                    <p>A fully responsive personal portfolio with AOS animations, typewriter effect, mobile hamburger menu, and a modern dark aesthetic. Deployed on GitHub Pages.</p>
+                    <div class="project-tags">
+                        <span>HTML</span><span>CSS</span><span>JavaScript</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact">
+        <div class="contact-container">
+            <h2 class="section-title" data-aos="fade-up">Get In <span>Touch</span></h2>
+            <p class="section-sub" data-aos="fade-up" data-aos-delay="100">Let's work together or just say hi!</p>
+
+            <div class="contact-wrapper">
+                <div class="contact-info" data-aos="fade-right" data-aos-duration="1500">
+                    <h3>Let's Connect</h3>
+                    <p>I'm looking for internship opportunities. Whether you have a project, an opportunity, or just want to say hello — reach out anytime!</p>
+                    <div class="contact-cards">
+                        <a class="contact-card" href="mailto:bhavya.annabattula@gmail.com">
+                            <div class="c-icon"><i class="fa-solid fa-envelope"></i></div>
+                            <div class="c-text"><h4>Email</h4><p>bhavya.annabattula@gmail.com</p></div>
+                        </a>
+                        <a class="contact-card" href="tel:+918639029157">
+                            <div class="c-icon"><i class="fa-solid fa-phone"></i></div>
+                            <div class="c-text"><h4>Phone</h4><p>+91 86390 29157</p></div>
+                        </a>
+                        <a class="contact-card" href="https://www.linkedin.com/in/annabattula-sai-bhavya-sri" target="_blank">
+                            <div class="c-icon"><i class="fa-brands fa-linkedin"></i></div>
+                            <div class="c-text"><h4>LinkedIn</h4><p>Annabattula Sai Bhavya Sri</p></div>
+                        </a>
+                        <a class="contact-card" href="https://github.com/bhavya-annabattula" target="_blank">
+                            <div class="c-icon"><i class="fa-brands fa-github"></i></div>
+                            <div class="c-text"><h4>GitHub</h4><p>bhavya-annabattula</p></div>
+                        </a>
+                    </div>
+                </div>
+
+                <form class="contact-form" data-aos="fade-left" data-aos-duration="1500" onsubmit="sendMessage(event)">
+                    <div class="form-group">
+                        <input type="text" id="c-name" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="c-email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="c-subject" placeholder="Subject">
+                    </div>
+                    <div class="form-group">
+                        <textarea id="c-message" rows="5" placeholder="Your Message..." required></textarea>
+                    </div>
+                    <button type="submit" class="send-btn">
+                        Send Message &nbsp;<i class="fa-solid fa-paper-plane"></i>
+                    </button>
+                    <p class="form-success" id="form-success">✅ Message sent! I'll get back to you soon.</p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>Designed & built with ❤️ by <span>Bhavya Sri</span> &nbsp;|&nbsp; © 2026 All Rights Reserved</p>
+        <div class="footer-socials">
+            <a href="https://www.linkedin.com/in/annabattula-sai-bhavya-sri" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="https://github.com/bhavya-annabattula" target="_blank"><i class="fa-brands fa-github"></i></a>
+        </div>
+    </footer>
+
+    <button class="scroll-top-btn" id="scrollTopBtn" onclick="scrollToTop()">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>AOS.init({offset:0,});</script>
+    <script src="script.js"></script>
+</body>
+</html>
