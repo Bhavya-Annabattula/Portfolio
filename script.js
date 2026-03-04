@@ -13,7 +13,7 @@ const texts = [
     "DEVELOPER",
     "VIBE CODER",
     "CS STUDENT",
-    "AWS ENTHUSIAST",
+    "ENTHUSIASTIC",
 ]
 
 let speed = 100;
@@ -107,4 +107,5 @@ function scrollToTop() {
 window.onload = function() {
     typeWriter();
     animateSkillBars();
+
 }
