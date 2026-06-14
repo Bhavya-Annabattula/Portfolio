@@ -109,3 +109,28 @@ window.onload = function() {
     animateSkillBars();
 
 }
+// ===== CYBERSECURITY SECTION: Domain bar animation =====
+// Add this inside your window.onload function (alongside animateSkillBars)
+// OR paste the observer block anywhere after the DOMContentLoaded / window.onload.
+
+function animateDomainBars() {
+    const fills = document.querySelectorAll(".domain-fill");
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const fill = entry.target;
+                fill.style.width = fill.getAttribute("data-width") + "%";
+                observer.unobserve(fill);
+            }
+        });
+    }, { threshold: 0.4 });
+    fills.forEach(fill => observer.observe(fill));
+}
+
+// ── UPDATE your existing window.onload to include this ──
+// Replace your current window.onload with:
+window.onload = function () {
+    typeWriter();
+    animateSkillBars();
+    animateDomainBars();   // <-- new line
+};
