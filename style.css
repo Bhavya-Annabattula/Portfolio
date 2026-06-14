@@ -506,6 +506,394 @@ section{
     border-radius: 20px;
     font-size: 0.78rem;
     color: rgb(211,3,159);
+} 
+/* ============================================================
+   CYBERSECURITY SECTION
+   Append this block to the bottom of your style.css
+   ============================================================ */
+
+#cybersec {
+    background: #050505;
+    padding: 80px 0;
+}
+
+.cybersec-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+/* ── Top grid: Tools + Domains ── */
+.cs-top-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.1fr;
+    gap: 25px;
+    margin-top: 50px;
+}
+
+/* ── Mid grid: Certs + Platforms ── */
+.cs-mid-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+    margin-top: 25px;
+}
+
+/* ── Shared card shell ── */
+.cs-card {
+    background: #0d0d0d;
+    border: 1px solid rgba(211, 3, 159, 0.2);
+    border-radius: 14px;
+    padding: 28px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.cs-card:hover {
+    border-color: rgb(211, 3, 159);
+    box-shadow: 0 0 25px rgba(211, 3, 159, 0.18);
+}
+
+.cs-card h3 {
+    color: rgb(211, 3, 159);
+    font-size: 0.95rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 22px;
+}
+
+/* ── Tool pills ── */
+.tool-pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.tool-pills span {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 7px 14px;
+    background: rgba(211, 3, 159, 0.07);
+    border: 1px solid rgba(211, 3, 159, 0.3);
+    border-radius: 20px;
+    font-size: 0.82rem;
+    color: #ccc;
+    transition: 0.25s;
+    cursor: default;
+}
+
+.tool-pills span i {
+    color: rgb(211, 3, 159);
+    font-size: 0.78rem;
+}
+
+.tool-pills span:hover {
+    background: rgb(211, 3, 159);
+    color: #fff;
+    border-color: rgb(211, 3, 159);
+}
+
+.tool-pills span:hover i {
+    color: #fff;
+}
+
+/* ── Domain bars ── */
+.domain-list {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.domain-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.domain-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: rgb(211, 3, 159);
+    box-shadow: 0 0 6px rgb(211, 3, 159);
+    margin-top: 5px;
+    flex-shrink: 0;
+}
+
+.domain-item > div:last-child {
+    flex: 1;
+}
+
+.domain-name {
+    font-size: 0.83rem;
+    color: #ccc;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.domain-bar {
+    width: 100%;
+    height: 6px;
+    background: rgba(255, 255, 255, 0.07);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.domain-fill {
+    height: 100%;
+    width: 0;
+    background: linear-gradient(90deg, rgb(211, 3, 159), #ff6fdb);
+    border-radius: 10px;
+    transition: width 1.6s ease;
+    box-shadow: 0 0 6px rgba(211, 3, 159, 0.5);
+}
+
+/* ── Cert timeline ── */
+.cert-timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.cert-item {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 10px 14px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: 0.3s;
+}
+
+.cert-item:hover {
+    border-color: rgba(211, 3, 159, 0.4);
+    background: rgba(211, 3, 159, 0.05);
+}
+
+.cert-icon {
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.85rem;
+    flex-shrink: 0;
+}
+
+.cert-done .cert-icon {
+    background: rgba(0, 200, 100, 0.12);
+    border: 1px solid rgba(0, 200, 100, 0.4);
+    color: #00e676;
+}
+
+.cert-progress .cert-icon {
+    background: rgba(255, 200, 0, 0.1);
+    border: 1px solid rgba(255, 200, 0, 0.35);
+    color: #ffc107;
+}
+
+.cert-upcoming .cert-icon {
+    background: rgba(211, 3, 159, 0.1);
+    border: 1px solid rgba(211, 3, 159, 0.3);
+    color: rgb(211, 3, 159);
+}
+
+.cert-info {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.cert-name {
+    color: #ddd;
+    font-size: 0.87rem;
+    font-weight: 500;
+}
+
+.cert-status {
+    font-size: 0.73rem;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+}
+
+.status-done   { color: #00e676; }
+.status-progress { color: #ffc107; }
+.status-upcoming { color: rgb(211, 3, 159); }
+
+/* ── Platform boxes ── */
+.platform-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+.platform-box {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 14px;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(211, 3, 159, 0.15);
+    border-radius: 10px;
+    text-decoration: none;
+    transition: 0.3s;
+    cursor: default;
+}
+
+a.platform-box { cursor: pointer; }
+
+.platform-box:hover {
+    border-color: rgb(211, 3, 159);
+    background: rgba(211, 3, 159, 0.06);
+    transform: translateY(-2px);
+}
+
+.platform-icon {
+    width: 38px;
+    height: 38px;
+    border-radius: 9px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    flex-shrink: 0;
+}
+
+.thm-color { background: rgba(30, 200, 100, 0.12); border: 1px solid rgba(30,200,100,0.35); color: #1ec864; }
+.htb-color { background: rgba(159, 239, 0, 0.1);   border: 1px solid rgba(159,239,0,0.3);  color: #9fef00; }
+.gh-color  { background: rgba(255,255,255,0.07);    border: 1px solid rgba(255,255,255,0.2); color: #eee; }
+.bb-color  { background: rgba(211, 3, 159, 0.1);    border: 1px solid rgba(211,3,159,0.3);  color: rgb(211,3,159); }
+
+.platform-name { color: #ddd; font-size: 0.85rem; font-weight: 600; }
+.platform-sub  { color: #666; font-size: 0.73rem; }
+
+/* ── Security Projects ── */
+.cs-projects-title {
+    margin: 35px 0 20px;
+}
+
+.cs-projects-title h3 {
+    color: rgb(211, 3, 159);
+    font-size: 1rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.cs-projects-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.cs-project-card {
+    background: #0d0d0d;
+    border: 1px solid rgba(211, 3, 159, 0.18);
+    border-radius: 14px;
+    padding: 24px;
+    position: relative;
+    overflow: hidden;
+    transition: 0.3s;
+}
+
+.cs-project-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 3px;
+    background: linear-gradient(90deg, rgb(211, 3, 159), transparent);
+    opacity: 0;
+    transition: 0.3s;
+}
+
+.cs-project-card:hover {
+    border-color: rgb(211, 3, 159);
+    box-shadow: 0 8px 30px rgba(211, 3, 159, 0.18);
+    transform: translateY(-3px);
+}
+
+.cs-project-card:hover::before { opacity: 1; }
+
+.cs-proj-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 14px;
+}
+
+.cs-proj-icon {
+    width: 44px; height: 44px;
+    display: flex; align-items: center; justify-content: center;
+    background: rgba(211, 3, 159, 0.1);
+    border: 1px solid rgb(211, 3, 159);
+    border-radius: 10px;
+    color: rgb(211, 3, 159);
+    font-size: 1.1rem;
+}
+
+.cs-proj-links { display: flex; gap: 10px; }
+.cs-proj-links a { color: #666; font-size: 1rem; text-decoration: none; transition: 0.25s; }
+.cs-proj-links a:hover { color: rgb(211, 3, 159); }
+
+.cs-project-card h4 {
+    color: white;
+    font-size: 0.97rem;
+    margin-bottom: 8px;
+}
+
+.cs-project-card p {
+    color: #777;
+    font-size: 0.83rem;
+    line-height: 1.65;
+    margin-bottom: 14px;
+}
+
+.cs-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7px;
+}
+
+.cs-tags span {
+    padding: 3px 11px;
+    background: rgba(211, 3, 159, 0.08);
+    border: 1px solid rgba(211, 3, 159, 0.3);
+    border-radius: 20px;
+    font-size: 0.75rem;
+    color: rgb(211, 3, 159);
+}
+
+/* ── Nav highlight ── */
+.nav-container .links a[href="#cybersec"]:hover,
+.dropdown .links a[href="#cybersec"]:hover {
+    color: rgb(211, 3, 159);
+}
+
+/* ── Responsive ── */
+@media (max-width: 884px) {
+    .cs-top-grid,
+    .cs-mid-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .cs-projects-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .cybersec-container {
+        padding: 0 20px;
+    }
+}
+
+@media (max-width: 600px) {
+    .platform-grid {
+        grid-template-columns: 1fr;
+    }
 }
 
 /* ===== CONTACT SECTION ===== */
