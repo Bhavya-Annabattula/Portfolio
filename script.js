@@ -12,7 +12,8 @@ const texts = [
     "DEVELOPER",
     "VIBE CODER",
     "CS STUDENT",
-    "ENTHUSIASTIC",
+    "ENTHUSIASTIC" 
+    "CYBER ANALYST",
 ]
 let speed = 100;
 const textElements = document.querySelector(".typewriter-text")
