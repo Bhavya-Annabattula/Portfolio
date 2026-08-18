@@ -1,473 +1,435 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-    <link rel="stylesheet" href="style.css">
-    <title>Portfolio Website</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bhavya Annabattula — CSE Student & Cybersecurity Enthusiast</title>
+<meta name="description" content="B.Tech CSE student specializing in cybersecurity — SOC analysis, VAPT, and full-stack projects.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <nav>
-        <div class="nav-container">
-            <div class="logo" data-aos="zoom-in" data-aos-duration="1500">
-                Annabattula<span>Sai Bhavya Sri</span>
-            </div>
-            <div class="links">
-                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="100"><a href="#home">Home</a></div>
-                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="200"><a href="#about">About</a></div>
-                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="300"><a href="#skills">Skills</a></div>
-                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="400"><a href="#projects">Projects</a></div>
-                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="500"><a href="#cybersec">CyberSec</a></div>
-                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="600"><a href="#contact">Contact</a></div>
-            </div>
-        </div>
-        <i class="fa-solid fa-bars hamburg" onclick="hamburg()"></i>
-        <div class="dropdown">
-            <div class="links">
-                <a href="#home" onclick="cancel()">Home</a>
-                <a href="#about" onclick="cancel()">About</a>
-                <a href="#skills" onclick="cancel()">Skills</a>
-                <a href="#projects" onclick="cancel()">Projects</a>
-                <a href="#cybersec" onclick="cancel()">CyberSec</a>
-                <a href="#contact" onclick="cancel()">Contact</a>
-                <i class="fa-solid fa-xmark cancel" onclick="cancel()"></i>
-            </div>
-        </div>
-    </nav>
 
-    <!-- HOME SECTION -->
-    <section id="home">
-        <div class="main-container">
-            <div class="content">
-                <h1 data-aos="fade-left" data-aos-duration="1500" data-aos-delay="700">Hey I'm <span>Bhavya Sri</span></h1>
-                <div data-aos="fade-right" data-aos-duration="1500" data-aos-delay="900" class="typewriter">I'm a <span class="typewriter-text"></span><label for="">|</label></div>
-                <p data-aos="flip-down" data-aos-duration="1500" data-aos-delay="1100">I am a Computer Science undergraduate with a strong interest in software development and cloud technologies. I enjoy building practical projects that strengthen my understanding of how systems work, from designing responsive web interfaces to implementing cloud infrastructure using AWS. My experience includes working with Java, Python, and JavaScript, along with hands-on exposure to networking concepts through cloud-based projects. I am particularly interested in problem-solving, system design, and continuously improving my technical skills by applying them to real-world scenarios.</p>
-                <div class="social-links">
-                    <a href="https://www.linkedin.com/in/annabattula-sai-bhavya-sri" target="_blank" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="1300"><i class="fa-brands fa-linkedin"></i></a>
-                    <a href="https://github.com/bhavya-annabattula" target="_blank" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="1400"><i class="fa-brands fa-github"></i></a>
-                </div>
-                <div class="btn" data-aos="zoom-out" data-aos-duration="1500" data-aos-delay="1800">
-                    <button onclick="downloadCV()">Download CV</button>
-                </div>
-            </div>
-            <div class="image" data-aos="zoom-in" data-aos-duration="3000">
-                <img src="me.png" alt="">
-            </div>
-        </div>
-    </section>
+<div class="grid-overlay" aria-hidden="true"></div>
+<div class="scanline" aria-hidden="true"></div>
 
-    <!-- ABOUT SECTION -->
-    <section id="about">
-        <div class="about-container">
-            <h2 class="section-title" data-aos="fade-up">About <span>Me</span></h2>
-            <div class="about-wrapper">
-                <div class="about-left" data-aos="fade-right" data-aos-duration="1500">
-                    <div class="about-img-box">
-                        <img src="me.png" alt="Bhavya Sri">
-                    </div>
-                    <div class="about-stats">
-                        <div class="stat" data-aos="zoom-in" data-aos-delay="100">
-                            <h3>8.3</h3>
-                            <p>CGPA</p>
-                        </div>
-                        <div class="stat" data-aos="zoom-in" data-aos-delay="200">
-                            <h3>2+</h3>
-                            <p>Projects</p>
-                        </div>
-                        <div class="stat" data-aos="zoom-in" data-aos-delay="300">
-                            <h3>5+</h3>
-                            <p>Certs</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="about-right" data-aos="fade-left" data-aos-duration="1500">
-                    <h3>Who am I?</h3>
-                    <p>I'm a motivated B.Tech CSE 2nd year student at Andhra University, Visakhapatnam. I'm passionate about software development and cloud computing, always eager to learn and build real-world solutions.</p>
-                    <p>I've worked with cloud infrastructure, built responsive web applications, and love solving problems with code. I'm currently looking for internship opportunities to apply my skills in a real engineering environment.</p>
-                    <div class="about-details">
-                        <div class="detail-item">
-                            <i class="fa-solid fa-graduation-cap"></i>
-                            <span>B.Tech CSE — Andhra University (CGPA: 8.3)</span>
-                        </div>
-                        <div class="detail-item">
-                            <i class="fa-solid fa-location-dot"></i>
-                            <span>Visakhapatnam, Andhra Pradesh</span>
-                        </div>
-                        <div class="detail-item">
-                            <i class="fa-solid fa-envelope"></i>
-                            <span>bhavya.annabattula@gmail.com</span>
-                        </div>
-                        <div class="detail-item">
-                            <i class="fa-solid fa-briefcase"></i>
-                            <span>Open to Internships</span>
-                        </div>
-                    </div>
-                    <a href="#contact" class="about-btn">Let's Talk <i class="fa-solid fa-arrow-right"></i></a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- SKILLS SECTION -->
-    <section id="skills">
-        <div class="skills-container">
-            <h2 class="section-title" data-aos="fade-up">My <span>Skills</span></h2>
-            <p class="section-sub" data-aos="fade-up" data-aos-delay="100">Technologies I work with</p>
-            <div class="skills-grid">
-                <div class="skill-box" data-aos="fade-up" data-aos-delay="100">
-                    <h3><i class="fa-solid fa-code"></i> Languages</h3>
-                    <div class="skill-bars">
-                        <div class="skill-item">
-                            <div class="skill-label"><span><i class="fa-brands fa-java"></i> Java</span><span>70%</span></div>
-                            <div class="bar"><div class="fill" data-width="70"></div></div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-label"><span><i class="fa-brands fa-python"></i> Python</span><span>65%</span></div>
-                            <div class="bar"><div class="fill" data-width="65"></div></div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-label"><span><i class="fa-brands fa-js"></i> JavaScript</span><span>60%</span></div>
-                            <div class="bar"><div class="fill" data-width="60"></div></div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-label"><span><i class="fa-solid fa-database"></i> SQL / MySQL</span><span>70%</span></div>
-                            <div class="bar"><div class="fill" data-width="70"></div></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="skill-box" data-aos="fade-up" data-aos-delay="200">
-                    <h3><i class="fa-solid fa-globe"></i> Web & Cloud</h3>
-                    <div class="skill-bars">
-                        <div class="skill-item">
-                            <div class="skill-label"><span><i class="fa-brands fa-html5"></i> HTML & CSS</span><span>75%</span></div>
-                            <div class="bar"><div class="fill" data-width="75"></div></div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-label"><span><i class="fa-brands fa-git-alt"></i> Git & GitHub</span><span>65%</span></div>
-                            <div class="bar"><div class="fill" data-width="65"></div></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="skill-box" data-aos="fade-up" data-aos-delay="300">
-                    <h3><i class="fa-solid fa-brain"></i> CS Fundamentals</h3>
-                    <div class="skill-bars">
-                        <div class="skill-item">
-                            <div class="skill-label"><span><i class="fa-solid fa-sitemap"></i> DSA</span><span>60%</span></div>
-                            <div class="bar"><div class="fill" data-width="60"></div></div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-label"><span><i class="fa-solid fa-lightbulb"></i> Problem Solving</span><span>70%</span></div>
-                            <div class="bar"><div class="fill" data-width="70"></div></div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-label"><span><i class="fa-solid fa-network-wired"></i> Computer Networks</span><span>60%</span></div>
-                            <div class="bar"><div class="fill" data-width="60"></div></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="skill-box" data-aos="fade-up" data-aos-delay="400">
-                    <h3><i class="fa-solid fa-trophy"></i> Achievements</h3>
-                    <div class="achievement-tags">
-                        <span>HackerRank 4-Star Java</span>
-                        <span>HackerRank 3-Star Python</span>
-                        <span>IBM Cloud Badge</span>
-                        <span>Google Prompt Engineering</span>
-                        <span>Kaggle Python Coder</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- PROJECTS SECTION -->
-    <section id="projects">
-        <div class="projects-container">
-            <h2 class="section-title" data-aos="fade-up">My <span>Projects</span></h2>
-            <p class="section-sub" data-aos="fade-up" data-aos-delay="100">Things I've built</p>
-            <div class="projects-grid">
-                <div class="project-card" data-aos="fade-up" data-aos-delay="100">
-                    <div class="project-top">
-                        <div class="project-icon"><i class="fa-solid fa-cloud"></i></div>
-                        <div class="project-links">
-                            <a href="https://github.com/bhavya-annabattula" target="_blank"><i class="fa-brands fa-github"></i></a>
-                        </div>
-                    </div>
-                    <h3>AWS VPC Networking</h3>
-                    <p>Designed a custom AWS VPC with public/private subnets, Route Tables, Internet Gateway, Load Balancer, and EC2 instances using AWS best practices for secure access.</p>
-                    <div class="project-tags">
-                        <span>AWS</span><span>VPC</span><span>EC2</span><span>Python</span>
-                    </div>
-                </div>
-                <div class="project-card" data-aos="fade-up" data-aos-delay="200">
-                    <div class="project-top">
-                        <div class="project-icon"><i class="fa-solid fa-laptop-code"></i></div>
-                        <div class="project-links">
-                            <a href="https://github.com/bhavya-annabattula" target="_blank"><i class="fa-brands fa-github"></i></a>
-                            <a href="#" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                        </div>
-                    </div>
-                    <h3>Personal Portfolio Website</h3>
-                    <p>A fully responsive personal portfolio with AOS animations, typewriter effect, mobile hamburger menu, and a modern dark aesthetic. Deployed on GitHub Pages.</p>
-                    <div class="project-tags">
-                        <span>HTML</span><span>CSS</span><span>JavaScript</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- CYBERSECURITY SECTION -->
-    <section id="cybersec">
-        <div class="cybersec-container">
-            <h2 class="section-title" data-aos="fade-up">Cyber<span>Security</span></h2>
-            <p class="section-sub" data-aos="fade-up" data-aos-delay="100">Offense-minded. Defense-focused.</p>
-
-            <div class="cs-top-grid">
-                <div class="cs-card cs-tools" data-aos="fade-right" data-aos-duration="1200">
-                    <h3><i class="fa-solid fa-shield-halved"></i> Security Tools</h3>
-                    <div class="tool-pills">
-                        <span><i class="fa-solid fa-bug"></i> Burp Suite</span>
-                        <span><i class="fa-solid fa-wifi"></i> Wireshark</span>
-                        <span><i class="fa-solid fa-magnifying-glass"></i> Nmap</span>
-                        <span><i class="fa-solid fa-terminal"></i> Metasploit</span>
-                        <span><i class="fa-solid fa-lock"></i> OWASP Top 10</span>
-                        <span><i class="fa-brands fa-linux"></i> Kali Linux</span>
-                        <span><i class="fa-solid fa-network-wired"></i> Netcat</span>
-                        <span><i class="fa-solid fa-database"></i> SQLMap</span>
-                    </div>
-                </div>
-                <div class="cs-card cs-domains" data-aos="fade-left" data-aos-duration="1200">
-                    <h3><i class="fa-solid fa-crosshairs"></i> Domain Expertise</h3>
-                    <div class="domain-list">
-                        <div class="domain-item">
-                            <div class="domain-dot"></div>
-                            <div>
-                                <span class="domain-name">Web Application Pentesting</span>
-                                <div class="domain-bar"><div class="domain-fill" data-width="72"></div></div>
-                            </div>
-                        </div>
-                        <div class="domain-item">
-                            <div class="domain-dot"></div>
-                            <div>
-                                <span class="domain-name">Network Scanning & Enumeration</span>
-                                <div class="domain-bar"><div class="domain-fill" data-width="78"></div></div>
-                            </div>
-                        </div>
-                        <div class="domain-item">
-                            <div class="domain-dot"></div>
-                            <div>
-                                <span class="domain-name">Phishing Detection (ML)</span>
-                                <div class="domain-bar"><div class="domain-fill" data-width="80"></div></div>
-                            </div>
-                        </div>
-                        <div class="domain-item">
-                            <div class="domain-dot"></div>
-                            <div>
-                                <span class="domain-name">SOC / Threat Analysis</span>
-                                <div class="domain-bar"><div class="domain-fill" data-width="65"></div></div>
-                            </div>
-                        </div>
-                        <div class="domain-item">
-                            <div class="domain-dot"></div>
-                            <div>
-                                <span class="domain-name">Cloud Security (AWS)</span>
-                                <div class="domain-bar"><div class="domain-fill" data-width="68"></div></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="cs-mid-grid">
-                <div class="cs-card" data-aos="fade-up" data-aos-delay="100">
-                    <h3><i class="fa-solid fa-certificate"></i> Certifications & Roadmap</h3>
-                    <div class="cert-timeline">
-                        <div class="cert-item cert-done">
-                            <div class="cert-icon"><i class="fa-solid fa-check"></i></div>
-                            <div class="cert-info">
-                                <span class="cert-name">Supraja Technologies Internship</span>
-                                <span class="cert-status status-done">Active · 2025</span>
-                            </div>
-                        </div>
-                        <div class="cert-item cert-done">
-                            <div class="cert-icon"><i class="fa-solid fa-check"></i></div>
-                            <div class="cert-info">
-                                <span class="cert-name">Google Prompt Engineering</span>
-                                <span class="cert-status status-done">Completed</span>
-                            </div>
-                        </div>
-                        <div class="cert-item cert-progress">
-                            <div class="cert-icon"><i class="fa-solid fa-clock"></i></div>
-                            <div class="cert-info">
-                                <span class="cert-name">CompTIA Security+</span>
-                                <span class="cert-status status-progress">In Progress</span>
-                            </div>
-                        </div>
-                        <div class="cert-item cert-upcoming">
-                            <div class="cert-icon"><i class="fa-solid fa-bullseye"></i></div>
-                            <div class="cert-info">
-                                <span class="cert-name">eJPT (eLearnSecurity)</span>
-                                <span class="cert-status status-upcoming">Planned</span>
-                            </div>
-                        </div>
-                        <div class="cert-item cert-upcoming">
-                            <div class="cert-icon"><i class="fa-solid fa-bullseye"></i></div>
-                            <div class="cert-info">
-                                <span class="cert-name">CEH (EC-Council)</span>
-                                <span class="cert-status status-upcoming">Planned</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="cs-card" data-aos="fade-up" data-aos-delay="200">
-                    <h3><i class="fa-solid fa-flag"></i> Platforms & Labs</h3>
-                    <div class="platform-grid">
-                        <a href="https://tryhackme.com" target="_blank" class="platform-box">
-                            <div class="platform-icon thm-color"><i class="fa-solid fa-cube"></i></div>
-                            <div>
-                                <p class="platform-name">TryHackMe</p>
-                                <p class="platform-sub">Active Learner</p>
-                            </div>
-                        </a>
-                        <a href="https://hackthebox.com" target="_blank" class="platform-box">
-                            <div class="platform-icon htb-color"><i class="fa-solid fa-box"></i></div>
-                            <div>
-                                <p class="platform-name">HackTheBox</p>
-                                <p class="platform-sub">CTF Practice</p>
-                            </div>
-                        </a>
-                        <a href="https://github.com/bhavya-annabattula" target="_blank" class="platform-box">
-                            <div class="platform-icon gh-color"><i class="fa-brands fa-github"></i></div>
-                            <div>
-                                <p class="platform-name">GitHub</p>
-                                <p class="platform-sub">Security Projects</p>
-                            </div>
-                        </a>
-                        <div class="platform-box">
-                            <div class="platform-icon bb-color"><i class="fa-solid fa-spider"></i></div>
-                            <div>
-                                <p class="platform-name">Bug Bounty</p>
-                                <p class="platform-sub">Coming Soon</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="cs-projects-title" data-aos="fade-up">
-                <h3><i class="fa-solid fa-code-branch"></i> Security Projects</h3>
-            </div>
-            <div class="cs-projects-grid">
-                <div class="cs-project-card" data-aos="fade-up" data-aos-delay="100">
-                    <div class="cs-proj-header">
-                        <div class="cs-proj-icon"><i class="fa-solid fa-fish"></i></div>
-                        <div class="cs-proj-links">
-                            <a href="https://github.com/bhavya-annabattula" target="_blank"><i class="fa-brands fa-github"></i></a>
-                        </div>
-                    </div>
-                    <h4>Phishing URL Detector</h4>
-                    <p>ML model using Logistic Regression (Scikit-learn) to classify phishing vs. legitimate URLs. Deployed via Flask with a REST API endpoint for real-time prediction.</p>
-                    <div class="cs-tags">
-                        <span>Python</span><span>Scikit-learn</span><span>Flask</span><span>ML</span>
-                    </div>
-                </div>
-                <div class="cs-project-card" data-aos="fade-up" data-aos-delay="200">
-                    <div class="cs-proj-header">
-                        <div class="cs-proj-icon"><i class="fa-solid fa-robot"></i></div>
-                        <div class="cs-proj-links">
-                            <a href="https://github.com/bhavya-annabattula" target="_blank"><i class="fa-brands fa-github"></i></a>
-                        </div>
-                    </div>
-                    <h4>SentinelAI — SOC Copilot</h4>
-                    <p>AI-powered Security Operations assistant built with Flask + Groq API (llama3-70b). Triages alerts, maps TTPs to MITRE ATT&CK, and drafts incident reports. Built for hackathon.</p>
-                    <div class="cs-tags">
-                        <span>Flask</span><span>Groq API</span><span>Tailwind</span><span>MITRE</span>
-                    </div>
-                </div>
-                <div class="cs-project-card" data-aos="fade-up" data-aos-delay="300">
-                    <div class="cs-proj-header">
-                        <div class="cs-proj-icon"><i class="fa-solid fa-network-wired"></i></div>
-                        <div class="cs-proj-links">
-                            <a href="https://github.com/bhavya-annabattula" target="_blank"><i class="fa-brands fa-github"></i></a>
-                        </div>
-                    </div>
-                    <h4>Network Recon & Enumeration</h4>
-                    <p>Internship assignment at Supraja Technologies. Full Nmap-based recon pipeline: host discovery, port scanning, OS/service fingerprinting, and structured vulnerability reporting.</p>
-                    <div class="cs-tags">
-                        <span>Nmap</span><span>Wireshark</span><span>Enumeration</span><span>Reporting</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- CONTACT SECTION -->
-    <section id="contact">
-        <div class="contact-container">
-            <h2 class="section-title" data-aos="fade-up">Get In <span>Touch</span></h2>
-            <p class="section-sub" data-aos="fade-up" data-aos-delay="100">Let's work together or just say hi!</p>
-            <div class="contact-wrapper">
-                <div class="contact-info" data-aos="fade-right" data-aos-duration="1500">
-                    <h3>Let's Connect</h3>
-                    <p>I'm looking for internship opportunities. Whether you have a project, an opportunity, or just want to say hello — reach out anytime!</p>
-                    <div class="contact-cards">
-                        <a class="contact-card" href="mailto:bhavya.annabattula@gmail.com">
-                            <div class="c-icon"><i class="fa-solid fa-envelope"></i></div>
-                            <div class="c-text"><h4>Email</h4><p>bhavya.annabattula@gmail.com</p></div>
-                        </a>
-                        <a class="contact-card" href="tel:+918639029157">
-                            <div class="c-icon"><i class="fa-solid fa-phone"></i></div>
-                            <div class="c-text"><h4>Phone</h4><p>+91 86390 29157</p></div>
-                        </a>
-                        <a class="contact-card" href="https://www.linkedin.com/in/annabattula-sai-bhavya-sri" target="_blank">
-                            <div class="c-icon"><i class="fa-brands fa-linkedin"></i></div>
-                            <div class="c-text"><h4>LinkedIn</h4><p>Annabattula Sai Bhavya Sri</p></div>
-                        </a>
-                        <a class="contact-card" href="https://github.com/bhavya-annabattula" target="_blank">
-                            <div class="c-icon"><i class="fa-brands fa-github"></i></div>
-                            <div class="c-text"><h4>GitHub</h4><p>bhavya-annabattula</p></div>
-                        </a>
-                    </div>
-                </div>
-                <form class="contact-form" data-aos="fade-left" data-aos-duration="1500" onsubmit="sendMessage(event)">
-                    <div class="form-group">
-                        <input type="text" id="c-name" placeholder="Your Name" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="email" id="c-email" placeholder="Your Email" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="text" id="c-subject" placeholder="Subject">
-                    </div>
-                    <div class="form-group">
-                        <textarea id="c-message" rows="5" placeholder="Your Message..." required></textarea>
-                    </div>
-                    <button type="submit" class="send-btn">
-                        Send Message &nbsp;<i class="fa-solid fa-paper-plane"></i>
-                    </button>
-                    <p class="form-success" id="form-success"> Message sent! I'll get back to you soon.</p>
-                </form>
-            </div>
-        </div>
-    </section>
-
-    <!-- FOOTER -->
-    <footer>
-        <p>Designed & built with ♥ by <span>Bhavya Sri</span> &nbsp;|&nbsp; © 2026 All Rights Reserved</p>
-        <div class="footer-socials">
-            <a href="https://www.linkedin.com/in/annabattula-sai-bhavya-sri" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
-            <a href="https://github.com/bhavya-annabattula" target="_blank"><i class="fa-brands fa-github"></i></a>
-        </div>
-    </footer>
-
-    <button class="scroll-top-btn" id="scrollTopBtn" onclick="scrollToTop()">
-        <i class="fa-solid fa-arrow-up"></i>
+<!-- NAV -->
+<nav id="navbar">
+  <div class="nav-inner">
+    <a href="#home" class="logo">bhavya<span class="accent">@</span>portfolio<span class="cursor-blink">_</span></a>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
     </button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#home" class="nav-link"><span class="nav-num">01</span>home</a></li>
+      <li><a href="#about" class="nav-link"><span class="nav-num">02</span>about</a></li>
+      <li><a href="#skills" class="nav-link"><span class="nav-num">03</span>skills</a></li>
+      <li><a href="#projects" class="nav-link"><span class="nav-num">04</span>projects</a></li>
+      <li><a href="#security" class="nav-link"><span class="nav-num">05</span>security</a></li>
+      <li><a href="#experience" class="nav-link"><span class="nav-num">06</span>experience</a></li>
+      <li><a href="#contact" class="nav-link"><span class="nav-num">07</span>contact</a></li>
+    </ul>
+  </div>
+</nav>
 
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script>AOS.init({offset:0,});</script>
-    <script src="script.js"></script>
+<!-- HERO -->
+<header id="home" class="hero">
+  <div class="hero-inner">
+    <div class="hero-terminal">
+      <div class="terminal-chrome">
+        <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
+        <span class="terminal-title">bhavya@auce ~ %</span>
+      </div>
+      <div class="terminal-body" id="terminalBody"></div>
+    </div>
+
+    <div class="hero-text">
+      <p class="eyebrow">// B.Tech CSE · Andhra University · Class of 2028</p>
+      <h1 class="hero-title">Bhavya<br>Annabattula</h1>
+      <p class="hero-role">Software Development <span class="accent-slash">/</span> Cybersecurity</p>
+      <p class="hero-desc">I build things — and then I try to break them. CS undergrad focused on secure systems, from AWS infrastructure to SOC-style threat triage, with hands-on VAPT work from real internship engagements.</p>
+      <div class="hero-cta">
+        <a href="#projects" class="btn btn-primary">View Projects</a>
+        <a href="#contact" class="btn btn-ghost">Get In Touch</a>
+      </div>
+      <div class="hero-socials">
+        <a href="https://github.com/Bhavya-Annabattula" target="_blank" rel="noopener" aria-label="GitHub">GitHub</a>
+        <a href="https://www.linkedin.com/in/bhavya-annabattula-692112320" target="_blank" rel="noopener" aria-label="LinkedIn">LinkedIn</a>
+        <a href="mailto:bhavya.annabattula@gmail.com" aria-label="Email">Email</a>
+      </div>
+    </div>
+  </div>
+  <div class="scroll-hint" aria-hidden="true"><span></span>scroll</div>
+</header>
+
+<main>
+
+<!-- ABOUT -->
+<section id="about" class="section">
+  <p class="section-eyebrow">// 02 — about</p>
+  <h2 class="section-title">Who I Am</h2>
+
+  <div class="about-grid">
+    <div class="about-copy">
+      <p>I'm a 3rd-year B.Tech Computer Science student at Andhra University College of Engineering, Visakhapatnam, specializing in cybersecurity. I'm building my path into the field independently — no campus placement cell, just consistent hands-on work: home-lab exploitation, real internship VAPT assignments, and full-stack builds that force me to understand systems from the inside out.</p>
+      <p>My focus right now is SOC Analyst and cybersecurity analyst roles — triaging alerts, mapping attacker behavior to MITRE ATT&CK, and understanding both sides of the fence, offense and defense.</p>
+    </div>
+
+    <div class="about-stats">
+      <div class="stat-card">
+        <span class="stat-num" data-target="8.38" data-decimal="true">0.00</span>
+        <span class="stat-label">CGPA</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-num" data-target="10">0</span>
+        <span class="stat-label">Projects Shipped</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-num" data-target="8">0</span>
+        <span class="stat-label">VAPT Reports</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-num" data-target="2028">0</span>
+        <span class="stat-label">Graduating</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills" class="section section-alt">
+  <p class="section-eyebrow">// 03 — skills</p>
+  <h2 class="section-title">Toolkit</h2>
+
+  <div class="skills-grid">
+    <div class="skill-card">
+      <h3>Languages</h3>
+      <ul class="tag-list">
+        <li>Java</li><li>Python</li><li>JavaScript</li><li>SQL</li>
+      </ul>
+    </div>
+    <div class="skill-card">
+      <h3>Web &amp; Cloud</h3>
+      <ul class="tag-list">
+        <li>HTML/CSS</li><li>Flask</li><li>AWS (VPC, EC2)</li><li>Git/GitHub</li>
+      </ul>
+    </div>
+    <div class="skill-card">
+      <h3>Security Tools</h3>
+      <ul class="tag-list">
+        <li>Burp Suite</li><li>Nmap</li><li>Wireshark</li><li>Metasploit</li><li>SQLMap</li><li>Maltego</li><li>Kali Linux</li>
+      </ul>
+    </div>
+    <div class="skill-card">
+      <h3>Security Domains</h3>
+      <ul class="tag-list">
+        <li>Web App VAPT</li><li>Network Recon</li><li>OSINT</li><li>SOC / Threat Triage</li><li>MITRE ATT&amp;CK</li>
+      </ul>
+    </div>
+    <div class="skill-card">
+      <h3>Data &amp; ML</h3>
+      <ul class="tag-list">
+        <li>Pandas</li><li>NumPy</li><li>Scikit-learn</li><li>Matplotlib</li>
+      </ul>
+    </div>
+    <div class="skill-card">
+      <h3>Fundamentals</h3>
+      <ul class="tag-list">
+        <li>DSA</li><li>Computer Networks</li><li>OS</li><li>System Design Basics</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="badges-row">
+    <span class="badge">HackerRank 4★ Java</span>
+    <span class="badge">HackerRank 3★ Python</span>
+    <span class="badge">IBM Cloud Badge</span>
+    <span class="badge">Google Prompt Engineering</span>
+    <span class="badge">Kaggle Python Coder</span>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects" class="section">
+  <p class="section-eyebrow">// 04 — projects</p>
+  <h2 class="section-title">Things I've Built</h2>
+  <p class="section-sub">A mix of full-stack, cloud, and applied ML — each one solving a real problem, not a tutorial clone.</p>
+
+  <div class="project-grid" id="projectGrid">
+    <!-- Project cards injected / present below for no-JS fallback -->
+
+    <article class="project-card" data-severity="high">
+      <div class="card-head">
+        <span class="card-id">PRJ-01</span>
+        <span class="severity-tag high">Featured</span>
+      </div>
+      <h3>SentinelAI — SOC Copilot</h3>
+      <p>An AI-powered Security Operations assistant. Runs four sequential LLM calls (Groq / LLaMA 3-70B) to triage alerts, map attacker TTPs to MITRE ATT&amp;CK, recommend response actions, and auto-draft incident reports. Built for a hackathon, deployed live.</p>
+      <ul class="stack-list">
+        <li>Flask</li><li>Groq API</li><li>Tailwind</li><li>MITRE ATT&amp;CK</li>
+      </ul>
+      <div class="card-links">
+        <a href="https://bhavya0602-sentinelai.hf.space" target="_blank" rel="noopener">Live Demo →</a>
+        <a href="https://github.com/Bhavya-Annabattula" target="_blank" rel="noopener">Source</a>
+      </div>
+    </article>
+
+    <article class="project-card" data-severity="high">
+      <div class="card-head">
+        <span class="card-id">PRJ-02</span>
+        <span class="severity-tag high">ML</span>
+      </div>
+      <h3>Phishing URL Detector</h3>
+      <p>Logistic Regression classifier trained on 109,870+ URLs to separate phishing from legitimate links — 97% accuracy. Deployed as a live Flask REST API on Render for real-time prediction.</p>
+      <ul class="stack-list">
+        <li>Python</li><li>Scikit-learn</li><li>Flask</li><li>Render</li>
+      </ul>
+      <div class="card-links">
+        <a href="https://github.com/Bhavya-Annabattula/phishing-detection-website" target="_blank" rel="noopener">Source →</a>
+      </div>
+    </article>
+
+    <article class="project-card" data-severity="med">
+      <div class="card-head">
+        <span class="card-id">PRJ-03</span>
+        <span class="severity-tag med">Security Tool</span>
+      </div>
+      <h3>USB Physical Security Tool</h3>
+      <p>Built during my internship. A Python/Tkinter GUI that toggles USB storage access via the Windows registry (HKLM\SYSTEM\CurrentControlSet\Services\USBSTOR). Auth is PBKDF2-HMAC-SHA256 with 260k iterations and constant-time comparison, with lockout after failed attempts and full audit logging. Packaged standalone with PyInstaller.</p>
+      <ul class="stack-list">
+        <li>Python</li><li>Tkinter</li><li>PBKDF2-HMAC</li><li>PyInstaller</li>
+      </ul>
+      <div class="card-links">
+        <a href="https://github.com/Bhavya-Annabattula/USB_security_app" target="_blank" rel="noopener">Source →</a>
+      </div>
+    </article>
+
+    <article class="project-card" data-severity="med">
+      <div class="card-head">
+        <span class="card-id">PRJ-04</span>
+        <span class="severity-tag med">Cloud</span>
+      </div>
+      <h3>AWS VPC Networking</h3>
+      <p>Designed a custom AWS VPC from scratch — public/private subnets, route tables, an internet gateway, a load balancer, and EC2 instances — following AWS best practices for secure network segmentation.</p>
+      <ul class="stack-list">
+        <li>AWS</li><li>VPC</li><li>EC2</li><li>Python</li>
+      </ul>
+      <div class="card-links">
+        <a href="https://github.com/Bhavya-Annabattula" target="_blank" rel="noopener">Source →</a>
+      </div>
+    </article>
+
+    <article class="project-card" data-severity="low">
+      <div class="card-head">
+        <span class="card-id">PRJ-05</span>
+        <span class="severity-tag low">Data</span>
+      </div>
+      <h3>Retail Sales Analysis</h3>
+      <p>SQL (MySQL) + Excel analysis of ~9,700 retail transactions from the Kaggle Superstore dataset — regional sales breakdowns, top-performing products, monthly trends, and category-level profit analysis.</p>
+      <ul class="stack-list">
+        <li>MySQL</li><li>Excel</li><li>Data Analysis</li>
+      </ul>
+      <div class="card-links">
+        <a href="https://github.com/Bhavya-Annabattula" target="_blank" rel="noopener">Source →</a>
+      </div>
+    </article>
+
+    <article class="project-card" data-severity="low">
+      <div class="card-head">
+        <span class="card-id">PRJ-06</span>
+        <span class="severity-tag low">Data</span>
+      </div>
+      <h3>COVID-19 Data Pipeline</h3>
+      <p>A Python data-analysis pipeline built with Pandas, Matplotlib, and OOP design. Cleans and explores a global COVID-19 Kaggle dataset, then visualizes trends and regional insights.</p>
+      <ul class="stack-list">
+        <li>Python</li><li>Pandas</li><li>Matplotlib</li>
+      </ul>
+      <div class="card-links">
+        <a href="https://github.com/Bhavya-Annabattula/covid19_pipeline" target="_blank" rel="noopener">Source →</a>
+      </div>
+    </article>
+
+    <article class="project-card" data-severity="low">
+      <div class="card-head">
+        <span class="card-id">PRJ-07</span>
+        <span class="severity-tag low">Web</span>
+      </div>
+      <h3>Cybersecurity Learning Tracker</h3>
+      <p>A gamified, standalone learning roadmap tracker with a dark hacker/terminal aesthetic — XP points, badges, and progress persistence via localStorage. Built to keep my own daily learning consistent.</p>
+      <ul class="stack-list">
+        <li>HTML</li><li>CSS</li><li>JavaScript</li>
+      </ul>
+      <div class="card-links">
+        <a href="https://github.com/Bhavya-Annabattula" target="_blank" rel="noopener">Source →</a>
+      </div>
+    </article>
+
+    <article class="project-card" data-severity="low">
+      <div class="card-head">
+        <span class="card-id">PRJ-08</span>
+        <span class="severity-tag low">Web</span>
+      </div>
+      <h3>This Portfolio</h3>
+      <p>Fully responsive, animation-driven personal site — hand-built with a terminal-boot hero, scroll reveals, and a security-report-styled project grid. Deployed on GitHub Pages.</p>
+      <ul class="stack-list">
+        <li>HTML</li><li>CSS</li><li>JavaScript</li>
+      </ul>
+      <div class="card-links">
+        <a href="https://github.com/Bhavya-Annabattula/Portfolio" target="_blank" rel="noopener">Source →</a>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+<!-- SECURITY -->
+<section id="security" class="section section-alt security-section">
+  <p class="section-eyebrow">// 05 — security</p>
+  <h2 class="section-title">Offense-Minded. Defense-Focused.</h2>
+  <p class="section-sub">Real exploitation, real reports. Not just theory.</p>
+
+  <div class="security-grid">
+
+    <div class="sec-block">
+      <h3>Home Lab — VAPT Practice</h3>
+      <p class="sec-desc">A self-built VirtualBox lab (Kali Linux, Metasploitable 2, Windows 7) for hands-on offensive practice, documented with full write-ups.</p>
+      <div class="lab-log">
+        <div class="log-line">
+          <span class="log-status done">DONE</span>
+          <span class="log-text">Lab 02 — Metasploitable vsftpd 2.3.4 backdoor exploitation (CVE-2011-2523) — real command execution + screenshots</span>
+        </div>
+        <div class="log-line">
+          <span class="log-status progress">WIP</span>
+          <span class="log-text">Lab 03 — Windows 7 EternalBlue / MS17-010</span>
+        </div>
+        <div class="log-line">
+          <span class="log-status done">DONE</span>
+          <span class="log-text">Windows Event Log analysis — identified Event IDs 4624, 4672, 4798</span>
+        </div>
+      </div>
+      <a href="https://github.com/Bhavya-Annabattula" target="_blank" rel="noopener" class="btn btn-ghost btn-small">View Repo →</a>
+    </div>
+
+    <div class="sec-block">
+      <h3>Internship VAPT Reports</h3>
+      <p class="sec-desc">Ethical hacking / web application VAPT internship at Supraja Technologies (May–Jul 2026). Completed assignment reports covering:</p>
+      <div class="chip-cloud">
+        <span class="chip">LFI/RFI</span>
+        <span class="chip">XSS</span>
+        <span class="chip">IDOR</span>
+        <span class="chip">iFrame Injection</span>
+        <span class="chip">SQL Injection</span>
+        <span class="chip">OSINT Recon</span>
+      </div>
+    </div>
+
+    <div class="sec-block">
+      <h3>Certs &amp; Roadmap</h3>
+      <div class="roadmap">
+        <div class="road-item complete">
+          <span class="road-dot"></span>
+          <div><strong>Google Prompt Engineering</strong><span>Completed</span></div>
+        </div>
+        <div class="road-item complete">
+          <span class="road-dot"></span>
+          <div><strong>Supraja Technologies Internship</strong><span>Completed · 2026</span></div>
+        </div>
+        <div class="road-item active">
+          <span class="road-dot"></span>
+          <div><strong>CompTIA Security+</strong><span>In Progress</span></div>
+        </div>
+        <div class="road-item planned">
+          <span class="road-dot"></span>
+          <div><strong>eJPT (eLearnSecurity)</strong><span>Planned</span></div>
+        </div>
+        <div class="road-item planned">
+          <span class="road-dot"></span>
+          <div><strong>CEH (EC-Council)</strong><span>Planned</span></div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience" class="section">
+  <p class="section-eyebrow">// 06 — experience</p>
+  <h2 class="section-title">Where I've Worked</h2>
+
+  <div class="timeline">
+    <div class="timeline-item">
+      <div class="timeline-marker"></div>
+      <div class="timeline-content">
+        <span class="timeline-date">May – Jul 2026</span>
+        <h3>Ethical Hacking &amp; VAPT Intern</h3>
+        <span class="timeline-org">Supraja Technologies</span>
+        <p>Completed hands-on web application VAPT assignments — LFI/RFI, XSS, IDOR, iframe injection, SQL injection, and OSINT reconnaissance using Maltego and HTTrack. Built and shipped a USB Physical Security Tool as part of the engagement.</p>
+      </div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-marker"></div>
+      <div class="timeline-content">
+        <span class="timeline-date">2026</span>
+        <h3>APSSDC Naipunyam AWS Intern</h3>
+        <span class="timeline-org">Government-backed program</span>
+        <p>Enrolled in a government-backed AWS internship carrying academic credit — hands-on cloud infrastructure work building on VPC and EC2 fundamentals.</p>
+      </div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-marker"></div>
+      <div class="timeline-content">
+        <span class="timeline-date">2025 – Present</span>
+        <h3>Core Member</h3>
+        <span class="timeline-org">Edumoon Coding Club, Andhra University</span>
+        <p>Active member contributing to a student coding community at Andhra University.</p>
+      </div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-marker"></div>
+      <div class="timeline-content">
+        <span class="timeline-date">Ongoing</span>
+        <h3>Independent Cybersecurity Learner</h3>
+        <span class="timeline-org">Self-directed</span>
+        <p>Daily hands-on learning — home-lab exploitation, TryHackMe, and applied projects — building toward SOC Analyst readiness without a formal placement pipeline.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="section section-alt contact-section">
+  <p class="section-eyebrow">// 07 — contact</p>
+  <h2 class="section-title">Let's Connect</h2>
+  <p class="section-sub">Open to SOC Analyst, cybersecurity analyst, and software engineering internship/entry-level opportunities.</p>
+
+  <div class="contact-grid">
+    <a href="mailto:bhavya.annabattula@gmail.com" class="contact-card">
+      <span class="contact-label">Email</span>
+      <span class="contact-value">bhavya.annabattula@gmail.com</span>
+    </a>
+    <a href="https://www.linkedin.com/in/bhavya-annabattula-692112320" target="_blank" rel="noopener" class="contact-card">
+      <span class="contact-label">LinkedIn</span>
+      <span class="contact-value">in/bhavya-annabattula</span>
+    </a>
+    <a href="https://github.com/Bhavya-Annabattula" target="_blank" rel="noopener" class="contact-card">
+      <span class="contact-label">GitHub</span>
+      <span class="contact-value">Bhavya-Annabattula</span>
+    </a>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <p>Designed &amp; built by Bhavya Annabattula <span class="accent">·</span> © 2026</p>
+</footer>
+
+<script src="script.js"></script>
 </body>
 </html>
